@@ -7,9 +7,16 @@
 # 3. 計算熱門/非熱門文章的「平均留言人數」與「平均按讚人數」
 
 
+# import requests
+# r = requests.get('https://www.zhihu.com/api/v4/questions/55493026/answers',headers={"user-agent":"my-app/0.0.1"})
+# response = r.text
+# print(response)
+
 import requests
-r = requests.get('https://www.zhihu.com/api/v4/questions/55493026/answers',headers={"user-agent":"my-app/0.0.1"})
+headers = {'user-agent': 'my-app/0.0.1'}
+r = requests.get('https://www.zhihu.com/api/v4/questions/55493026/answers',headers=headers)
 response = r.text
+
 print(response)
 
 # 網站已被修改目前無法使用(作答失敗)
